@@ -102,7 +102,8 @@ int main() {
 	do{
 		inc(R);
 		linner(R);
-	} while (elapsed(R) < CLOCKS_PER_SEC);//run for 1 second but CLOCKS_PER_SEC is platform dependent. maybe near 1000 is better this time only.
+	} while (elapsed(R) < 1);//run for 1 second but CLOCKS_PER_SEC is platform dependent. maybe near 1000 is better this time only.
+	//} while (elapsed(R) < CLOCKS_PER_SEC);//run for 1 second but CLOCKS_PER_SEC is platform dependent. maybe near 1000 is better this time only.
 	std::cout << "Tag: " << R.Tag << "\n";
 	std::cout << "Count: " << R.C.Value << "\n";
 	std::cout << "Elapsed time (clock ticks): " << elapsed(R) << "\n";
